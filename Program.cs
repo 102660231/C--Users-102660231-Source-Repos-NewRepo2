@@ -11,15 +11,17 @@ namespace ConsoleApp1
 
             int rollnum = 0;
             int sum = 0;
+            int sum1 = 0;
+
             int averagesum = 0;
-          
+            int averagesum1 = 0;
 
             string Answer = "Y";
 
             bool endroll = false;
             int counter = 0;
             int rollnum3 = 0;
-            int rollnum4 = 0;
+            
        
             while (endroll==false)
             {
@@ -30,8 +32,8 @@ namespace ConsoleApp1
                 int Number3 = dies3.Next(1, 7);
                 rollnum3 = Number3;
 
-                Console.WriteLine("  system rolled number is : " + Number + "  .  "+Number3);
-                Console.WriteLine("  DO you want to roll your number  Y/N? ");
+                Console.WriteLine("     System rolled number is : " + Number + ",  "+Number3+  "");
+                Console.WriteLine("     DO you want to roll your number  Y/N? ");
                 Answer = Console.ReadLine();
                 Answer = Answer.ToUpper();
 
@@ -47,7 +49,7 @@ namespace ConsoleApp1
                    
                     Console.ReadKey();
                     rollnum = Number1;
-                    rollnum4 = Number4;
+                    rollnum3 = Number4;
                 }
                 counter++;
 
@@ -61,11 +63,14 @@ namespace ConsoleApp1
                 {
 
                     sum = sum + rollnum;
-                   
-                    averagesum = sum / counter;
+                    sum1 = sum1 + rollnum3;
+                    averagesum = (sum / counter);
+                    averagesum1 = (sum1 / counter);
+                    
                     Console.WriteLine("sum : " + sum + "  " + "average: " + averagesum + " ");
+                    Console.Write("sum 1 :" + sum1 + "average 2:" + averagesum1);
                     Console.ReadKey();
-                    endroll = true;              
+                    endroll = true;           
                 }
             }
           
